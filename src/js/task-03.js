@@ -12,3 +12,23 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const ulRef = document.querySelector('.gallery');
+const liesRef = images.map(({ url, alt }) => {
+  const liRef = document.createElement('li');
+  const imgRef = document.createElement('img');
+  imgRef.src = url;
+  imgRef.alt = alt;
+  imgRef.style.display = 'block';
+  imgRef.style.width = '100%';
+  imgRef.style.marginBottom = '10px'
+
+  
+  liRef.append(imgRef);
+  return liRef;
+});
+
+ulRef.append(...liesRef );
+console.log(ulRef);
+
+// ulRef.insertAdjacentHTML('afterbegin', '<li> .... </li>');
