@@ -27,6 +27,9 @@ function createBoxes(amount) {
 };
 
 function destroyBoxes(amount) {
+  if (amount === 0) {
+    return;
+  }
   for (let i = 1; i <= amount; i += 1) {
     const divEl = document.querySelector('#boxes div');
     divEl.remove();
