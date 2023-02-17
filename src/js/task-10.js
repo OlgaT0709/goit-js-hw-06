@@ -27,7 +27,6 @@ function createBoxes(amount) {
     divEl.style.left = `${i * 10}px`;
     refs.box.appendChild(divEl);
   }
-
   return size;
 }
 
@@ -44,8 +43,12 @@ function onDestroyBoxes() {
 refs.btnCreate.addEventListener('click', onCreateBoxes);
 refs.btnDestroy.addEventListener('click', onDestroyBoxes);
 
-
-
+let ppp;
+refs.input.addEventListener('change', (event) => {
+  ppp = event.currentTarget.value;
+  return ppp;
+});
+console.log (ppp);
 
 
 
