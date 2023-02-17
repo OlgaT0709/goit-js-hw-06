@@ -17,7 +17,7 @@ function onFormSubmit(event) {
         console.log(formData);
 
         // const formData = new FormData(event.currentTarget);
-    
+        //     console.log(formData);
         // formData.forEach((value, name) => {
         //     const result = {};
         //     result[name] = value;
